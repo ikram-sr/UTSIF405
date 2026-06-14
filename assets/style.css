@@ -1,0 +1,222 @@
+:root {
+    --primary: #3454d1;
+    --primary-dark: #243b8f;
+    --secondary: #6c7aaf;
+    --success: #198754;
+    --bg-soft: #f4f7fb;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --white: #ffffff;
+    --shadow-soft: 0 15px 40px rgba(26, 35, 126, 0.10);
+    --radius-xl: 24px;
+    --radius-lg: 18px;
+    --radius-md: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #3b82f6 100%);
+    min-height: 100vh;
+}
+
+body.page-light {
+    background:
+        radial-gradient(circle at top left, rgba(52, 84, 209, 0.08), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.08), transparent 30%),
+        #f8fafc;
+}
+
+.navbar-custom {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.brand-badge {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #60a5fa, #3454d1);
+    color: #fff;
+}
+
+.hero-section {
+    padding: 70px 0;
+}
+
+.soft-label {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+.soft-label.dark {
+    background: rgba(52, 84, 209, 0.10);
+    color: var(--primary-dark);
+}
+
+.hero-info .info-chip {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    backdrop-filter: blur(8px);
+}
+
+.glass-card,
+.page-header-card,
+.table-section-card,
+.stat-card {
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.page-header-card,
+.table-section-card {
+    background: #fff;
+    padding: 28px;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 100%;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.form-label {
+    color: var(--text-main);
+}
+
+.input-group-modern .input-group-text,
+.search-modern .input-group-text {
+    background: #eef2ff;
+    border: 1px solid #dbe3ff;
+    color: var(--primary);
+}
+
+.input-group-modern .form-control,
+.input-group-modern textarea,
+.search-modern .form-control {
+    border: 1px solid #dbe3ff;
+    padding: 12px 14px;
+}
+
+.input-group-modern .form-control:focus,
+.input-group-modern textarea:focus,
+.search-modern .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 84, 209, 0.14);
+    border-color: #9bb2ff;
+}
+
+.btn-modern {
+    border: none;
+    background: linear-gradient(135deg, var(--primary), #4f7cff);
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(52, 84, 209, 0.22);
+}
+
+.btn-modern:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.auto-time-note {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    color: var(--text-muted);
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+}
+
+.alert-modern {
+    border-radius: 14px;
+}
+
+.modern-table thead th {
+    background: #eef2ff;
+    color: var(--primary-dark);
+    border-bottom: none;
+    white-space: nowrap;
+}
+
+.modern-table tbody td {
+    vertical-align: middle;
+}
+
+.result-note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.empty-state {
+    padding: 20px;
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .page-header-card,
+    .table-section-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .search-modern {
+        display: block;
+    }
+
+    .search-modern .input-group-text,
+    .search-modern .form-control,
+    .search-modern .btn,
+    .search-modern a.btn {
+        width: 100%;
+        border-radius: 12px !important;
+        margin-bottom: 8px;
+    }
+}
